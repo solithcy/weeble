@@ -1,0 +1,171 @@
+body{
+  background: #121213;
+  color: white;
+  user-select: none;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+.App, #root, body, html {
+  text-align: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  border-bottom: 1px solid #3a3a3c;
+  position: relative;
+}
+
+.letterbody{
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: calc(100% - 75px);
+}
+
+
+@media (max-width: 1500px) {
+  .letterbody {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .letterbody {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .animeimage{
+    display: none;
+  }
+  .animeCont{
+    height: fit-content;
+  }
+  .animeCont h2{
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.key{
+  border-radius: 5px;
+  display: inline-block;
+  height: 3em;
+  width: 3em;
+  margin: 0.1rem;
+  position: relative;
+  background: #3a3a3c;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.key.inactive{
+  filter: brightness(0.5);
+}
+
+.key h1{
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.letterkeyboard{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .key{
+    width: 2em;
+    margin: 0.075rem;
+  }
+  .key h1{
+    font-size: 1em;
+  }
+}
+
+.keyboardcont{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.keyboard{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+a{
+  color: #7289DA;
+  text-decoration: none;
+}
+.link{
+  cursor: pointer;
+  color: #7289DA;
+  text-decoration: none;
+}
+
+img{
+  pointer-events: none;
+  border-radius: 16px;
+}
+
+.animeimage{
+  max-height: 30rem;
+  max-width: 25rem;
+}
+
+.header h1{
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
