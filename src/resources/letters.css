@@ -1,0 +1,13 @@
+.letters{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: fit-content;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .letters{
+        margin-top: -10vh;
+    }
+}
